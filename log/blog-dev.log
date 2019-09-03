@@ -1764,3 +1764,432 @@ Verify the connector's configuration, identify and stop any process that's liste
 2019-09-03 17:10:13.090  WARN 15564 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
 2019-09-03 17:10:13.101  INFO 15564 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
 2019-09-03 17:10:13.101  INFO 15564 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 17:37:03.863  INFO 15564 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 17:37:03.894  INFO 15564 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:37:03.894  INFO 15564 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 17:37:07.791  INFO 15564 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:37:07.805  INFO 15564 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:37:07.806  INFO 15564 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:37:41.990  INFO 15564 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:37:42.000  INFO 15564 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:37:42.001  INFO 15564 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:51:38.301  INFO 6988 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 6988 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 17:51:38.305  INFO 6988 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 17:51:38.379  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 17:51:38.379  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 17:51:39.514  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 17:51:39.514  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 17:51:39.618  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 4 repository interfaces.
+2019-09-03 17:51:39.630  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 17:51:39.631  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 17:51:39.653  INFO 6988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 17:51:39.654  INFO 6988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 17:51:39.654  INFO 6988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 17:51:39.655  INFO 6988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 17:51:39.655  INFO 6988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-09-03 17:51:40.134  INFO 6988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5bfa22e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 17:51:40.676  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 17:51:40.748  INFO 6988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 17:51:40.749  INFO 6988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 17:51:40.923  INFO 6988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 17:51:40.924  INFO 6988 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2544 ms
+2019-09-03 17:51:41.098  INFO 6988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 17:51:41.099  WARN 6988 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 17:51:41.213  INFO 6988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 17:51:41.268  INFO 6988 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 17:51:41.336  INFO 6988 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 17:51:41.337  INFO 6988 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 17:51:41.451  INFO 6988 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 17:51:41.731  INFO 6988 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 17:51:42.685  INFO 6988 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 17:51:42.751  INFO 6988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 17:51:43.069  INFO 6988 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 17:51:44.085  INFO 6988 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 17:51:44.138  WARN 6988 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 17:51:44.187  INFO 6988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 17:51:44.833  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 17:51:44.835  INFO 6988 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 7.358 seconds (JVM running for 9.526)
+2019-09-03 17:52:16.408  INFO 6988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 17:52:16.408  INFO 6988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 17:52:16.419  INFO 6988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-09-03 17:52:16.457  INFO 6988 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:52:16.585  INFO 6988 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:52:16.585  INFO 6988 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:55:52.357  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:55:52.373  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:55:52.373  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:57:18.272  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:57:18.286  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:57:18.286  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:57:19.844  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 17:57:19.888  WARN 6988 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 17:57:19.905  WARN 6988 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 17:57:19.912  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:57:19.912  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 17:58:03.264  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:03.274  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:03.274  INFO 6988 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:39.807  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:39.816  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:39.817  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:42.829  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:42.830  INFO 6988 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:42.831  INFO 6988 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:42.831  INFO 6988 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:42.845  INFO 6988 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:42.845  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:42.845  INFO 6988 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:42.845  INFO 6988 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:42.847  INFO 6988 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:42.847  INFO 6988 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:42.854  INFO 6988 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:42.855  INFO 6988 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 17:58:49.011  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 17:58:49.017  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 17:58:49.017  INFO 6988 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:01:16.065  INFO 4664 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 4664 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 18:01:16.067  INFO 4664 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 18:01:16.127  INFO 4664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 18:01:16.127  INFO 4664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 18:01:17.149  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:01:17.150  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:01:17.280  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 4 repository interfaces.
+2019-09-03 18:01:17.295  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:01:17.296  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:01:17.323  INFO 4664 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 18:01:17.323  INFO 4664 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 18:01:17.324  INFO 4664 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 18:01:17.325  INFO 4664 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 18:01:17.325  INFO 4664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-09-03 18:01:17.704  INFO 4664 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57327e65] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 18:01:18.289  INFO 4664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 18:01:18.362  INFO 4664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 18:01:18.362  INFO 4664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 18:01:18.531  INFO 4664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 18:01:18.531  INFO 4664 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2403 ms
+2019-09-03 18:01:18.726  INFO 4664 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 18:01:18.727  WARN 4664 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 18:01:18.863  INFO 4664 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 18:01:18.922  INFO 4664 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 18:01:18.982  INFO 4664 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 18:01:18.984  INFO 4664 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 18:01:19.110  INFO 4664 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 18:01:19.363  INFO 4664 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 18:01:20.245  INFO 4664 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 18:01:20.319  INFO 4664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 18:01:20.725  INFO 4664 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 18:01:21.919  INFO 4664 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 18:01:21.974  WARN 4664 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 18:01:22.029  INFO 4664 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 18:01:22.718  INFO 4664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 18:01:22.720  INFO 4664 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 7.274 seconds (JVM running for 9.205)
+2019-09-03 18:02:24.256  INFO 4664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 18:02:24.256  INFO 4664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 18:02:24.270  INFO 4664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-09-03 18:02:24.306  INFO 4664 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:02:24.436  INFO 4664 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:02:24.438  INFO 4664 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:06:57.524  INFO 5780 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 5780 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 18:06:57.528  INFO 5780 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 18:06:57.576  INFO 5780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 18:06:57.576  INFO 5780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 18:06:58.596  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:06:58.597  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:06:58.696  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 4 repository interfaces.
+2019-09-03 18:06:58.709  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:06:58.710  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:06:58.733  INFO 5780 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 18:06:58.734  INFO 5780 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 18:06:58.734  INFO 5780 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 18:06:58.735  INFO 5780 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 18:06:58.735  INFO 5780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-09-03 18:06:59.116  INFO 5780 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94c33204] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 18:06:59.599  INFO 5780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 18:06:59.672  INFO 5780 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 18:06:59.673  INFO 5780 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 18:06:59.848  INFO 5780 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 18:06:59.848  INFO 5780 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2271 ms
+2019-09-03 18:07:00.006  INFO 5780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 18:07:00.007  WARN 5780 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 18:07:00.122  INFO 5780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 18:07:00.175  INFO 5780 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 18:07:00.234  INFO 5780 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 18:07:00.235  INFO 5780 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 18:07:00.387  INFO 5780 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 18:07:00.777  INFO 5780 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 18:07:01.802  INFO 5780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 18:07:01.862  INFO 5780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 18:07:02.180  INFO 5780 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 18:07:03.122  INFO 5780 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 18:07:03.181  WARN 5780 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 18:07:03.234  INFO 5780 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 18:07:03.860  INFO 5780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 18:07:03.862  INFO 5780 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 6.941 seconds (JVM running for 8.592)
+2019-09-03 18:07:24.008  INFO 5780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 18:07:24.008  INFO 5780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 18:07:24.024  INFO 5780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-09-03 18:07:24.078  INFO 5780 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:07:24.209  INFO 5780 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:07:24.209  INFO 5780 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:08:05.188  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:08:05.198  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:08:05.199  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:09:13.196  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:09:13.209  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:09:13.210  INFO 5780 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:13:16.611  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 18:13:16.645  WARN 5780 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:13:16.660  WARN 5780 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:13:16.666  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:13:16.666  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 18:13:19.641  INFO 5780 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:13:19.650  INFO 5780 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:13:19.650  INFO 5780 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:14:22.076  INFO 5780 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:14:22.086  INFO 5780 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:14:22.086  INFO 5780 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:14:46.470  INFO 5780 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:14:46.481  INFO 5780 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:14:46.481  INFO 5780 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:15:07.989  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:15:07.995  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:15:07.995  INFO 5780 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:15:20.900  INFO 5780 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:15:20.904  INFO 5780 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:15:20.904  INFO 5780 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:18:46.904  INFO 14640 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 14640 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 18:18:46.907  INFO 14640 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 18:18:46.951  INFO 14640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 18:18:46.951  INFO 14640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 18:18:48.021  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:18:48.022  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:18:48.125  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 4 repository interfaces.
+2019-09-03 18:18:48.140  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:18:48.141  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:18:48.165  INFO 14640 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 18:18:48.166  INFO 14640 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 18:18:48.167  INFO 14640 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 18:18:48.168  INFO 14640 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 18:18:48.168  INFO 14640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-09-03 18:18:48.530  INFO 14640 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b922f08b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 18:18:49.026  INFO 14640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 18:18:49.099  INFO 14640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 18:18:49.099  INFO 14640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 18:18:49.262  INFO 14640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 18:18:49.263  INFO 14640 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2312 ms
+2019-09-03 18:18:49.433  INFO 14640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 18:18:49.434  WARN 14640 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 18:18:49.547  INFO 14640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 18:18:49.605  INFO 14640 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 18:18:49.663  INFO 14640 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 18:18:49.665  INFO 14640 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 18:18:49.787  INFO 14640 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 18:18:50.044  INFO 14640 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 18:18:50.926  INFO 14640 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 18:18:50.991  INFO 14640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 18:18:51.309  INFO 14640 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 18:18:52.247  INFO 14640 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 18:18:52.298  WARN 14640 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 18:18:52.352  INFO 14640 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 18:18:53.009  INFO 14640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 18:18:53.011  INFO 14640 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 6.695 seconds (JVM running for 8.692)
+2019-09-03 18:19:02.943  INFO 14640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 18:19:02.944  INFO 14640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 18:19:02.958  INFO 14640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-09-03 18:19:03.006  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:19:03.132  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:19:03.132  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:19:15.877  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:19:15.882  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:19:15.882  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:19:28.030  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:19:28.035  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:19:28.035  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:19:34.905  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:19:34.910  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:19:34.911  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:20:13.281  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:20:13.285  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:20:13.286  INFO 14640 --- [http-nio-8080-exec-3] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:20:18.581  INFO 14640 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:20:18.585  INFO 14640 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:20:18.585  INFO 14640 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:20:50.317  INFO 14640 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:20:50.322  INFO 14640 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:20:50.322  INFO 14640 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:21:18.653  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:21:18.657  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:21:18.657  INFO 14640 --- [http-nio-8080-exec-7] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:21:45.372  INFO 14640 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[52, {}]}
+2019-09-03 18:21:45.378  INFO 14640 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:21:45.379  INFO 14640 --- [http-nio-8080-exec-5] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 18:21:54.350  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 18:21:54.385  WARN 14640 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:21:54.400  WARN 14640 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:21:54.406  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:21:54.406  INFO 14640 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 18:36:50.823  INFO 6616 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 6616 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 18:36:50.826  INFO 6616 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 18:36:50.863  INFO 6616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 18:36:50.863  INFO 6616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 18:36:51.686  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:36:51.686  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:36:51.809  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 4 repository interfaces.
+2019-09-03 18:36:51.826  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:36:51.828  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:36:51.855  INFO 6616 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 18:36:51.855  INFO 6616 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 18:36:51.856  INFO 6616 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 18:36:51.857  INFO 6616 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 18:36:51.857  INFO 6616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-09-03 18:36:52.290  INFO 6616 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b1987f64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 18:36:52.777  INFO 6616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 18:36:52.846  INFO 6616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 18:36:52.847  INFO 6616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 18:36:53.003  INFO 6616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 18:36:53.003  INFO 6616 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2139 ms
+2019-09-03 18:36:53.172  INFO 6616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 18:36:53.173  WARN 6616 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 18:36:53.283  INFO 6616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 18:36:53.338  INFO 6616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 18:36:53.397  INFO 6616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 18:36:53.399  INFO 6616 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 18:36:53.523  INFO 6616 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 18:36:53.779  INFO 6616 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 18:36:54.709  INFO 6616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 18:36:54.772  INFO 6616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 18:36:55.103  INFO 6616 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 18:36:56.047  INFO 6616 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 18:36:56.094  WARN 6616 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 18:36:56.144  INFO 6616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 18:36:56.773  INFO 6616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 18:36:56.776  INFO 6616 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 6.47 seconds (JVM running for 8.076)
+2019-09-03 18:48:00.633  INFO 11480 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 11480 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 18:48:00.637  INFO 11480 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 18:48:00.690  INFO 11480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 18:48:00.690  INFO 11480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 18:48:01.544  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:48:01.544  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:48:01.638  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 4 repository interfaces.
+2019-09-03 18:48:01.650  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 18:48:01.651  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 18:48:01.673  INFO 11480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 18:48:01.673  INFO 11480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 18:48:01.674  INFO 11480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 18:48:01.675  INFO 11480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 18:48:01.675  INFO 11480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-09-03 18:48:01.998  INFO 11480 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ceeac8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 18:48:02.464  INFO 11480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 18:48:02.533  INFO 11480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 18:48:02.533  INFO 11480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 18:48:02.696  INFO 11480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 18:48:02.697  INFO 11480 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2006 ms
+2019-09-03 18:48:02.850  INFO 11480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 18:48:02.851  WARN 11480 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 18:48:02.952  INFO 11480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 18:48:03.007  INFO 11480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 18:48:03.061  INFO 11480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 18:48:03.063  INFO 11480 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 18:48:03.179  INFO 11480 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 18:48:03.432  INFO 11480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 18:48:04.316  INFO 11480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 18:48:04.376  INFO 11480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 18:48:04.674  INFO 11480 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 18:48:05.593  INFO 11480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 18:48:05.642  WARN 11480 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 18:48:05.691  INFO 11480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 18:48:06.315  INFO 11480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 18:48:06.318  INFO 11480 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 6.27 seconds (JVM running for 7.886)
+2019-09-03 18:48:21.740  INFO 11480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 18:48:21.741  INFO 11480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 18:48:21.757  INFO 11480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-09-03 18:48:21.792  INFO 11480 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 18:48:21.888  WARN 11480 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:48:21.904  WARN 11480 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 18:48:21.913  INFO 11480 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:48:21.913  INFO 11480 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 18:48:38.251  INFO 11480 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 18:48:38.346  INFO 11480 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 18:48:38.347  INFO 11480 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:01:37.937  INFO 12776 --- [restartedMain] com.lrm.BlogApplication                  : Starting BlogApplication on DESKTOP-AT11THK with PID 12776 (D:\IdeaProjects\blog\target\classes started by Administrator in D:\IdeaProjects\blog)
+2019-09-03 19:01:37.941  INFO 12776 --- [restartedMain] com.lrm.BlogApplication                  : The following profiles are active: dev
+2019-09-03 19:01:38.003  INFO 12776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 19:01:38.004  INFO 12776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 19:01:39.351  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 19:01:39.351  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 19:01:39.475  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112ms. Found 4 repository interfaces.
+2019-09-03 19:01:39.495  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-03 19:01:39.497  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 19:01:39.525  INFO 12776 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.BlogRepository.
+2019-09-03 19:01:39.526  INFO 12776 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TagReposIyoy.
+2019-09-03 19:01:39.527  INFO 12776 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.TypeReposiyory.
+2019-09-03 19:01:39.528  INFO 12776 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lrm.dao.UserRepository.
+2019-09-03 19:01:39.528  INFO 12776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-09-03 19:01:39.983  INFO 12776 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bb7f240c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 19:01:40.554  INFO 12776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-03 19:01:40.627  INFO 12776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 19:01:40.628  INFO 12776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-03 19:01:40.792  INFO 12776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 19:01:40.792  INFO 12776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2788 ms
+2019-09-03 19:01:40.962  INFO 12776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 19:01:40.963  WARN 12776 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-03 19:01:41.070  INFO 12776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 19:01:41.125  INFO 12776 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 19:01:41.178  INFO 12776 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-03 19:01:41.180  INFO 12776 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 19:01:41.293  INFO 12776 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 19:01:41.553  INFO 12776 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-03 19:01:42.489  INFO 12776 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 19:01:42.556  INFO 12776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 19:01:42.866  INFO 12776 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 19:01:43.964  INFO 12776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 19:01:44.026  WARN 12776 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 19:01:44.083  INFO 12776 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-03 19:01:44.857  INFO 12776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-03 19:01:44.860  INFO 12776 --- [restartedMain] com.lrm.BlogApplication                  : Started BlogApplication in 7.584 seconds (JVM running for 9.389)
+2019-09-03 19:01:51.536  INFO 12776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 19:01:51.536  INFO 12776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 19:01:51.551  INFO 12776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-09-03 19:01:51.591  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 19:01:51.727  WARN 12776 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 19:01:51.745  WARN 12776 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-03 19:01:51.758  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:01:51.758  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 19:02:20.353  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 19:02:20.449  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:02:20.449  INFO 12776 --- [http-nio-8080-exec-1] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:11:56.050  INFO 12776 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/search', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.search', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}, JDK]}
+2019-09-03 19:11:56.102  INFO 12776 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:11:56.103  INFO 12776 --- [http-nio-8080-exec-8] com.lrm.aspect.LogAspect                 : result : search
+2019-09-03 19:12:05.840  INFO 12776 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/51', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[51, {}]}
+2019-09-03 19:12:05.854  INFO 12776 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:05.855  INFO 12776 --- [http-nio-8080-exec-2] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:12:22.077  INFO 12776 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/50', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[50, {}]}
+2019-09-03 19:12:22.084  INFO 12776 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:22.084  INFO 12776 --- [http-nio-8080-exec-10] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:12:29.111  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/50', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[50, {}]}
+2019-09-03 19:12:29.116  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:29.116  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:12:35.127  INFO 12776 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/50', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[50, {}]}
+2019-09-03 19:12:35.131  INFO 12776 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:35.131  INFO 12776 --- [http-nio-8080-exec-6] com.lrm.aspect.LogAspect                 : result : blog
+2019-09-03 19:12:48.927  INFO 12776 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-09-03 19:12:48.945  INFO 12776 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:48.945  INFO 12776 --- [http-nio-8080-exec-4] com.lrm.aspect.LogAspect                 : result : index
+2019-09-03 19:12:50.419  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : request : RequestLog{url='/blog/53', ip='0:0:0:0:0:0:0:1', classMethod='com.lrm.web.IndexController.blog', args=[53, {}]}
+2019-09-03 19:12:50.435  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : --------doAfter在方法执行之后执行--------------
+2019-09-03 19:12:50.435  INFO 12776 --- [http-nio-8080-exec-9] com.lrm.aspect.LogAspect                 : result : blog

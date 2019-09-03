@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客详情</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" >
     <link rel="stylesheet" href="../static/css/typo.css">
     <link rel="stylesheet" href="../static/css/animate.css">
     <link rel="stylesheet" href="../static/lib/prism/prism.css">
     <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
     <link rel="stylesheet" href="../static/css/me.css">
-    <link rel="stylesheet" href="../static/css/gitalk.css" th:href="@{/css/gitalk.css}">
+
 
 </head>
 <body>
@@ -585,14 +584,12 @@ h5,h6{font-size:1em;}
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-<script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script >
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 
 <script src="../static/lib/prism/prism.js"></script>
 <script src="../static/lib/tocbot/tocbot.min.js"></script>
 <script src="../static/lib/qrcode/qrcode.min.js"></script>
 <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
-<script src="../static/js/MD5.min.js" th:src="@{/js/MD5.min.js}"></script>
 
 
 
@@ -602,7 +599,7 @@ h5,h6{font-size:1em;}
 <script type="text/javascript" th:inline="javascript">
 
     /*<-- 生成 gitalk 插件-->*/
-    var gitalk = new Gitalk({
+    const  gitalk  =  new  Gitalk({
         clientID: 'c049309397b40cd28753',
         clientSecret: '8d2b4dac5fbfb4355eddeb8a03c574116433640d',
         repo: 'blogbalk',
