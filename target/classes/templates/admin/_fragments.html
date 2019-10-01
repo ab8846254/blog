@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="../static/css/me.css"th:href="@{/css/me.css}">
     <link rel="stylesheet" href="../static/lib/prism/css/prism.css" th:href="@{/lib/prism/css/prism.css}">
     <link rel="stylesheet" href="../static/lib/editormd/css/editormd.css"th:href="@{/lib/editormd/css/editormd.css}">
+    <link rel="stylesheet" href="../static/css/drag.css"th:href="@{/css/drag.css}" type="text/css">
+    <EMBED src="http://sa.sycdn.kuwo.cn/8adaaba698b4e3f658dcfd8ef1468976/5d7351bb/resource/n2/23/80/2610772174.mp3" hidden="true" autostart="true" loop=infinite width=0 height=0>
 </head>
 <body>
 <!--导航-->
 <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">管理后台</h2>
@@ -24,7 +27,7 @@
                 <div class="ui dropdown  item">
                     <div class="text">
                         <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005"th:src="@{session.user.avatar}">
-                      <span th:text="${session.user.nickname}">李仁密</span>
+                      <span th:text="${session.user.nickname}">梁超</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
@@ -84,11 +87,14 @@
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
         <script src="../static/lib/prism/js/prism.js" th:src="@{/lib/prism/js/prism.js}"></script>
         <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
         <script src="../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
         <script src="../static/js/myspecialefficacy.js" th:src="@{/js/myspecialefficacy.js}"></script>
-
+        <script src="../static/lib/v2.js" th:src="@{/lib/v2.js}"></script>
+        <script src="../static/js/jquery-1.7.2.min.js"th:src="@{/js/jquery-1.7.2.min.js}"></script>
+        <script src="../static/js/drag.js" th:src="@{/js/drag.js}"></script>
     </th:block>
 </body>
 </html>

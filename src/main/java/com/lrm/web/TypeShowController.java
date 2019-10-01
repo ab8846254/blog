@@ -38,6 +38,7 @@ public class TypeShowController {
             direction = Sort.Direction.DESC) Pageable pageable, Model model,@PathVariable  Long id){
         //查询处所有的分类
         List<Type> types = typeService.listTypeTop(10000);
+
         if(id==-1){
             id=types.get(0).getId();
         }

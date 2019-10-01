@@ -41,14 +41,14 @@
                     <h3 class="ui teal header">分类</h3>
                 </div>
                 <div class="right aligned column">
-                    共 <h3 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}">14 </h3>个
+                    共 <h3 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}">14 </h3>个分类
                 </div>
             </div>
         </div>
         <div class="ui attached segment m-padded-tb-large">
             <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
-                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic  button"th:classappend="type.id==activeTypeId ? 'teal'"  th:text="${type.name}">思考与感悟</a>
-                <div class="ui basic  left pointing label"th:classappend="type.id==activeTypeId ? 'teal'" th:text="${#arrays.length(type.blogs)}">24</div>
+                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic  button"th:classappend="${type.id==activeTypeId}? 'teal'"  th:text="${type.name}">思考与感悟</a>
+                <div class="ui basic  left pointing label"th:classappend="${type.id==activeTypeId}? 'teal'" th:text="${#arrays.length(type.blogs)}">24</div>
             </div>
         </div>
         <div class="ui attached teal segment">
@@ -143,9 +143,10 @@
     </div>
 
 </footer>
-
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');

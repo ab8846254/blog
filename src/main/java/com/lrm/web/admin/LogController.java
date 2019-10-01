@@ -48,7 +48,6 @@ public class LogController {
      */
     @RequestMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session, RedirectAttributes attributes) {
-
         User user = userService.checkUser(username, password);
         if (user != null) {
             user.setPassword(null);

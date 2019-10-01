@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Administrator
@@ -68,5 +69,20 @@ public interface BlogService {
      */
    Page<Blog>listBlog(String query,Pageable pageable);
 
+    /**
+     * 根据标签ID查询所有标签
+     * @param tagId
+     * @param pageable
+     * @return
+     */
+   Page<Blog> listBlog(Long tagId,Pageable pageable );
+
+    /**
+     * 归档页面查询
+     * @return
+     */
+    Map<String,List<Blog>>archivesBlog();
+
+    Long countBlog();
    Blog getAndConvert(Long id);
 }
