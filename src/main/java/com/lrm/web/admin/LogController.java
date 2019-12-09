@@ -2,17 +2,26 @@ package com.lrm.web.admin;
 
 import com.lrm.log.User;
 import com.lrm.service.UserService;
+import com.lrm.util.HibernateValidatorUtils;
+import com.lrm.util.MD5Utils;
+import com.sun.deploy.net.HttpResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import sun.net.www.http.HttpClient;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.awt.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * @author Administrator
@@ -25,7 +34,8 @@ public class LogController {
     private UserService userService;
 
     @Autowired
-    private StringRedisTemplate RedisTemplate;
+    private HibernateValidatorUtils hibernateValidatorUtils;
+
 
     /**
      * 跳转到登陆页面
@@ -62,21 +72,37 @@ public class LogController {
 
     /**
      * 注册页面
-     * @param username
-     * @param password
      * @param session
      * @param attributes
      * @return
      */
     @RequestMapping("/register")
-    public String register(@RequestParam Long Phone,@RequestParam String username,@RequestParam String password,HttpSession session,RedirectAttributes attributes){
-        //生成6为数的验证码
-        String code = RandomStringUtils.randomNumeric(6);
-        //存放一份在redis中
-        RedisTemplate.opsForValue().set(Phone+"code", code);
-        //在消息队列里面存放一份
+    public String register(User user, HttpSession session, RedirectAttributes attributes, HttpResponse response){
 
-        return null;
+       // String user1 = userService.register(user);
+        //校验字段是否填写完整
+        boolean checkUserForm = hibernateValidatorUtils.checkUserForm(user, attributes);
+        if(checkUserForm){
+            User user1 = userService.checkUserNameAndPhon(user.getUsername(),user.getPhone());
+            if(user1==null){
+                String user2 = userService.register(user);
+                if(user2!=null){
+                    attributes.addFlashAttribute("registermessage", "注册成功");
+                    return "redirect:/admin";
+                }else {
+                    attributes.addFlashAttribute("failmessage", "注册失败请稍后再试试");
+                    return "redirect:/admin";
+                }
+            }else {
+                attributes.addFlashAttribute("registerfailmessage", "注册失败{用户已注册或手机号已使用}");
+                return "redirect:/admin";
+            }
+        }else {
+
+            return "redirect:/admin";
+        }
+
+
     }
 
     /**

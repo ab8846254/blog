@@ -1,0 +1,21 @@
+
+psquid:UselessImportCheck"GRemove this unused import 'org.apache.commons.lang3.RandomStringUtils'.(Í¦ª¤ÿÿÿÿÿ
+Zsquid:S3752r">Add a "method" parameter to this "@RequestMapping" annotation.(ÓÃÁºøÿÿÿÿ
+Tsquid:S3752O">Add a "method" parameter to this "@RequestMapping" annotation.(ª£¡
+ssquid:S1192D"PDefine a constant instead of duplicating this literal "redirect:/admin" 6 times.(…Öºıÿÿÿÿ8·¥œ†î-
+|squid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.RestController'.(±íş¡şÿÿÿÿ
+xsquid:UselessImportCheck
+"TRemove this unused import 'org.springframework.data.redis.core.StringRedisTemplate'.(Á•½
+zsquid:UselessImportCheck"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ
+Usquid:S3752-">Add a "method" parameter to this "@RequestMapping" annotation.(¬”ç
+Vsquid:S2441@":Make "User" serializable or don't store it in the session.(£™Õàûÿÿÿÿ
+Usquid:S3752;">Add a "method" parameter to this "@RequestMapping" annotation.(ô¸èÉ
+[squid:UselessImportCheck"2Remove this unused import 'com.lrm.util.MD5Utils'.(ÃÙ‡Ùùÿÿÿÿ
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(¼İ²çûÿÿÿÿ8¸Ä¬Ìî-
+[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓŞÏÛ8¸Ä¬Ìî-
+nsquid:UselessImportCheck"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8¸Ä¬Ìî-
+`squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8¸Ä¬Ìî-
+hsquid:UselessImportCheck"8Remove this unused import 'sun.net.www.http.HttpClient'.(Æ¡³ ÿÿÿÿÿ8¸Ä¬Ìî-
+isquid:UselessImportCheck"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8¸Ä¬Ìî-
+csquid:S4684P"@Replace this persistent entity with a simple POJO or DTO object.(Ş›šşûÿÿÿÿ8¸Ä¬Ìî-
+isquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ŒÑ»8¸Ä¬Ìî-

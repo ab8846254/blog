@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title th:replace="${title}">博客详情</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/tocbot/4.8.0/tocbot.css" >
     <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
     <link rel="stylesheet" href="../static/css/me.css"th:href="@{/css/me.css}">
     <link rel="stylesheet" href="../static/lib/prism/css/prism.css" th:href="@{/lib/prism/css/prism.css}">
     <link rel="stylesheet" href="../static/lib/editormd/css/editormd.css"th:href="@{/lib/editormd/css/editormd.css}">
     <link rel="stylesheet" href="../static/css/drag.css"th:href="@{/css/drag.css}" type="text/css">
     <EMBED src="http://sa.sycdn.kuwo.cn/8adaaba698b4e3f658dcfd8ef1468976/5d7351bb/resource/n2/23/80/2610772174.mp3" hidden="true" autostart="true" loop=infinite width=0 height=0>
+
 </head>
 <body>
 <!--导航-->
@@ -83,10 +84,11 @@
     </footer>
 
     <th:block th:fragment="script">
+        <script type="text/javascript" src="../static/js/login.js" th:src="@{/js/login.js}"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-        <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+        <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" type="text/javascript" ></script>
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
         <script src="../static/lib/prism/js/prism.js" th:src="@{/lib/prism/js/prism.js}"></script>
         <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>

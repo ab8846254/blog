@@ -1,0 +1,4 @@
+
+Usquid:S2589,"7Remove this expression which always evaluates to "true"(…Ð¶‚8Äûýùí-
+xsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(»ÒÂžùÿÿÿÿ
+lsquid:UselessImportCheck"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Þ
