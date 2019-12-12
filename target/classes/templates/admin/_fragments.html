@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../static/lib/prism/css/prism.css" th:href="@{/lib/prism/css/prism.css}">
     <link rel="stylesheet" href="../static/lib/editormd/css/editormd.css"th:href="@{/lib/editormd/css/editormd.css}">
     <link rel="stylesheet" href="../static/css/drag.css"th:href="@{/css/drag.css}" type="text/css">
-    <EMBED src="http://sa.sycdn.kuwo.cn/8adaaba698b4e3f658dcfd8ef1468976/5d7351bb/resource/n2/23/80/2610772174.mp3" hidden="true" autostart="true" loop=infinite width=0 height=0>
-
 </head>
 <body>
 <!--导航-->
@@ -84,8 +82,8 @@
     </footer>
 
     <th:block th:fragment="script">
-        <script type="text/javascript" src="../static/js/login.js" th:src="@{/js/login.js}"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="../static/js/jquery-1.7.2.min.js"th:src="@{/js/jquery-1.7.2.min.js}"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
         <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" type="text/javascript" ></script>
@@ -93,10 +91,10 @@
         <script src="../static/lib/prism/js/prism.js" th:src="@{/lib/prism/js/prism.js}"></script>
         <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
         <script src="../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
-        <script src="../static/js/myspecialefficacy.js" th:src="@{/js/myspecialefficacy.js}"></script>
+        <!--<script src="../static/js/myspecialefficacy.js" th:src="@{/js/myspecialefficacy.js}"></script>-->
         <script src="../static/lib/v2.js" th:src="@{/lib/v2.js}"></script>
-        <script src="../static/js/jquery-1.7.2.min.js"th:src="@{/js/jquery-1.7.2.min.js}"></script>
         <script src="../static/js/drag.js" th:src="@{/js/drag.js}"></script>
+        <script type="text/javascript" src="../static/js/login.js" th:src="@{/js/login.js}"></script>
     </th:block>
 </body>
 </html>

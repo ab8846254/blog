@@ -89,7 +89,22 @@
                         </div>
                     </div>
                 </div>
-                <div class=" field">
+               <!-- <div class=" field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact teal basic label">标签</label>
+                        <div class="ui fluid selection multiple search  dropdown">
+                            <input type="hidden" name="tagIds" th:value="*{tagIds}">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">标签</div>
+                            <div class="menu">
+                                <div th:each="tag : ${tags}" class="item" data-value="1" th:data-value="${tag.id}"
+                                     th:text="${tag.name}">java
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="required field">
                     <div class="ui left labeled action input">
                         <label class="ui compact teal basic label">标签</label>
                         <div class="ui fluid selection multiple search  dropdown">
@@ -182,8 +197,8 @@
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-                    <a href="#" class="item m-text-thin">QQ：865729312</a>
+                    <a href="#" class="item m-text-thin">Email：478139369@qq.com</a>
+                    <a href="#" class="item m-text-thin">QQ：478139369</a>
                 </div>
             </div>
             <div class="seven wide column">
@@ -198,12 +213,15 @@
 </footer>
 
 <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+
+
+
+
+<!--/*/</th:block>/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<!--/*/</th:block>/*/-->
-
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <script type="text/javascript">
 
     //初始化Markdown编辑器
@@ -224,6 +242,17 @@
     $('.ui.dropdown').dropdown({
         on: 'hover'
     });
+    //保存
+    $('#save-btn').click(function () {
+        $('[name="published"]').val(false);
+        $('#blog-from').submit();
+    });
+    //发布
+    $('#published-btn').click(function () {
+        $('[name="published"]').val(true);
+        $('#blog-from').submit();
+    });
+
 
     $('.ui.form').form({
         fields: {
@@ -266,17 +295,6 @@
     });
 
 
-    //保存
-    $('#save-btn').click(function () {
-        $('[name="published"]').val(false);
-        $('#blog-from').submit();
-    });
-    //发布
-    $('#published-btn').click(function () {
-        alert("我被触发了")
-        $('[name="published"]').val(true);
-        $('#blog-from').submit();
-    });
 
 </script>
 </body>

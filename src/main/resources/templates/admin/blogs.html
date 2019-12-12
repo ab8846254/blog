@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客登陆管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/me.css">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/me.css}">
 </head>
 <body>
 
@@ -121,8 +121,7 @@
                             <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item"
                                th:unless="${page.last}">下一页</a>
                         </div>
-                        <a href="#" th:href="@{/admin/blogs/input}"
-                           class="ui mini right floated teal basic button">新增</a>
+                        <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">新增</a>
                     </th>
                 </tr>
                 </tfoot>

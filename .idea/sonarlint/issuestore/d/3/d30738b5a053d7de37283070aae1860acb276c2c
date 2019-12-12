@@ -1,0 +1,9 @@
+
+usquid:S1488ƒ"]Immediately return this expression instead of assigning it to the temporary variable "blog2".(ùÇ»ä
+ssquid:S1488,"\Immediately return this expression instead of assigning it to the temporary variable "blog".(“§ã
+Nsquid:S3655,"7Call "Optional#isPresent()" before accessing the value.(“§ã
+Dsquid:S16049"(Make this anonymous inner class a lambda( ¡ç­ùÿÿÿÿ
+Osquid:S3655Õ"7Call "Optional#isPresent()" before accessing the value.(“§ã
+\squid:CallToDeprecatedMethodš"3Remove this use of "PageRequest"; it is deprecated.(ÙÕİ·
+Nsquid:S3655~"7Call "Optional#isPresent()" before accessing the value.(¿©ãß
+Esquid:S1604±"(Make this anonymous inner class a lambda( ¡ç­ùÿÿÿÿ
