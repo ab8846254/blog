@@ -3,25 +3,18 @@ package com.lrm.web.admin;
 import com.lrm.log.User;
 import com.lrm.service.UserService;
 import com.lrm.util.HibernateValidatorUtils;
-import com.lrm.util.MD5Utils;
-import com.sun.deploy.net.HttpResponse;
-import org.apache.commons.lang3.RandomStringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import sun.net.www.http.HttpClient;
 
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import javax.servlet.http.HttpSession;
-import java.awt.*;
-import java.io.IOException;
-import java.io.PrintWriter;
+
 
 /**
  * @author Administrator
@@ -77,7 +70,7 @@ public class LogController {
      * @return
      */
     @RequestMapping("/register")
-    public String register(User user, HttpSession session, RedirectAttributes attributes, HttpResponse response){
+    public String register(User user, HttpSession session, RedirectAttributes attributes){
 
        // String user1 = userService.register(user);
         //校验字段是否填写完整

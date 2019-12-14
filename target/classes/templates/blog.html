@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../static/css/typo.css">
     <link rel="stylesheet" href="../static/css/animate.css">
     <link rel="stylesheet" href="../static/lib/prism/prism.css">
-   <!-- <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">-->
-
     <link rel="stylesheet" href="../static/css/me.css">
 
 
@@ -622,15 +620,18 @@ h5,h6{font-size:1em;}
         on: 'click',
         position: 'bottom center'
     });
-
+    //目录生成插件
     tocbot.init({
-        // Where to render the table of contents.
+        // 在哪里呈现目录。
         tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
+        // 在哪里获取标题以建立目录。
         contentSelector: '.js-toc-content',
-        // Which headings to grab inside of the contentSelector element.
+        // 要在contentSelector元素内抓取的标题。
         headingSelector: 'h1, h2, h3',
+        //用于内容物中相对或绝对定位的容器内的标题。
+        hasInnerContainers: true,
     });
+
 
     $('.toc.button').popup({
         popup: $('.toc-container.popup'),

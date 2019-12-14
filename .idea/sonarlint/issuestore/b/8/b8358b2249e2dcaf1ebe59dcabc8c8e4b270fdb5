@@ -1,13 +1,13 @@
 
-fsquid:S4488a"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ïÀ´¼ùÿÿÿÿ
 msquid:S1192l"VDefine a constant instead of duplicating this literal "redirect:/admin/blogs" 3 times.(Í¤
-\squid:S1192-"FDefine a constant instead of duplicating this literal "types" 3 times.(Àœ¢r
-Zsquid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(¯§â›ùÿÿÿÿ
-Usquid:S3752R">Add a "method" parameter to this "@RequestMapping" annotation.(±Ä†Í
-Usquid:S3752u">Add a "method" parameter to this "@RequestMapping" annotation.(Ø£ý¦
-Wsquid:S4684b"@Replace this persistent entity with a simple POJO or DTO object.(õÜ‘Ä
-dsquid:S1192h"HDefine a constant instead of duplicating this literal "message" 4 times.(¥”ÌÄÿÿÿÿÿ
-[squid:UselessImportCheck"2Remove this unused import 'javax.persistence.Lob'.(úÍá®üÿÿÿÿ
-Zsquid:S37528">Add a "method" parameter to this "@RequestMapping" annotation.(þ”ÄÀüÿÿÿÿ
 msquid:S2159w"VRemove this call to "equals"; comparisons between unrelated types always return false.(‘†é
+Usquid:S3752u">Add a "method" parameter to this "@RequestMapping" annotation.(Ø£ý¦
+Usquid:S3752R">Add a "method" parameter to this "@RequestMapping" annotation.(±Ä†Í
+Wsquid:S4684b"@Replace this persistent entity with a simple POJO or DTO object.(õÜ‘Ä
+Zsquid:S37528">Add a "method" parameter to this "@RequestMapping" annotation.(þ”ÄÀüÿÿÿÿ
+Zsquid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(¯§â›ùÿÿÿÿ
+dsquid:S1192h"HDefine a constant instead of duplicating this literal "message" 4 times.(¥”ÌÄÿÿÿÿÿ
+fsquid:S4488a"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ïÀ´¼ùÿÿÿÿ
+\squid:S1192-"FDefine a constant instead of duplicating this literal "types" 3 times.(Àœ¢r
 Zsquid:S3752+">Add a "method" parameter to this "@RequestMapping" annotation.(¨Žó­øÿÿÿÿ
+[squid:UselessImportCheck"2Remove this unused import 'javax.persistence.Lob'.(úÍá®üÿÿÿÿ

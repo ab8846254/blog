@@ -9,14 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/tocbot/4.8.0/tocbot.css" >
     <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
-   <!-- <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
     <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
     <link rel="stylesheet" href="../static/css/drag.css" th:href="@{/css/drag.css}" type="text/css">
-
-
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css">
 </head>
 <body>
 
@@ -92,13 +89,27 @@
 </footer>
 
 <th:block th:fragment="script">
-    <script src="../static/js/jquery-1.7.2.min.js" th:src="@{/js/jquery-1.7.2.min.js}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="../static/js/jquery-1.12.4.min.js" th:src="@{/js/jquery-1.12.4.min.js}"></script>-->
+
+
+
+
+    <script src="../static/js/start.js" th:src="@{/js/start.js}"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <script src="https://cdn.bootcss.com/tocbot/4.8.0/tocbot.min.js"></script>
     <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js" ></script>
     <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
