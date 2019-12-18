@@ -17,43 +17,6 @@
 <br>
 <br>
 <br>
-<!--<div class="m-container-small m-padded-tb-massive" style="max-width: 30em!important;">
-    <div class="ui container">
-        <div class="ui middle aligned center aligned grid">
-            <div class="column">
-                <h2 class="ui teal image header">
-                    <img src="https://semantic-ui.com/examples/assets/images/logo.png" class="image">
-                    <div class="content">
-                        博客管理后台登陆系统
-                    </div>
-                </h2>
-                <form id="test_form" class="ui large form" method="post" action="#" th:action="@{/admin/login}">
-                    <div class="ui  segment">
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="user icon"></i>
-                                <input type="text" name="username" placeholder="用户名">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="密码">
-                            </div>
-                        </div>
-                        <button type="button"  id="TencentCaptcha"data-appid="2011660451"data-cbfn="callback" class="ui fluid large teal submit button">登   录</button>
-                    </div>
-
-                    <div class="ui error mini message"></div>
-                    <div  class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>
-
-                </form>
-
-                &lt;!&ndash;注册地&ndash;&gt;
-            </div>
-        </div>
-    </div>
-</div>-->
 <h2>博客管理后台登陆系统</h2>
 <div class="container right-panel-active" id="container">
     <div class="form-container sign-up-container">
@@ -61,11 +24,11 @@
             <h1>注 册</h1>
             <input style=" height: 40px; border-radius: 19px"  type="text" name="username" placeholder="请输入用户名">
 
-            <input style=" height: 40px;  border-radius: 19px" type="password" name="password" placeholder="请输入密码">
-
+            <input style=" height: 40px;  border-radius: 19px" type="password" id="pass1" name="password" placeholder="请输入密码">
+            <input style=" height: 40px;  border-radius: 19px" type="password" id="pass2" name="password" placeholder="请再次输入密码">
             <input style=" height: 40px;  border-radius: 19px" type="tel" name="phone" placeholder="请输入手机号">
-
             <button  type="button" onclick="register()">注 册</button>
+
             <div class="ui mini negative message" th:if="${registermessage!=null}" >
                 <script language="JavaScript"> alert('注册成功,请点击登陆按钮登陆');</script>
             </div>
@@ -142,10 +105,20 @@
 
 
     function register() {
+    debugger
+        //获取第一个输入框的值
+        var pass1 = document.getElementById("pass1").value;
+        //获取第二个输入框的值
+        var pass2 = document.getElementById("pass2").value;
+        if(pass1==pass2){
 
-        var form2 = document.getElementById('test_form2');
+            var form2 = document.getElementById('test_form2');
 
-        form2.submit();
+            form2.submit();
+        }else {
+            alert("两次密码输入不匹配请重新输入")
+        }
+
 
     }
 </script>

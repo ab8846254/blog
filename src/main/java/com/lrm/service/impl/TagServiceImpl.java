@@ -3,15 +3,25 @@ package com.lrm.service.impl;
 import com.lrm.NotFoundException;
 import com.lrm.dao.TagReposIyoy;
 import com.lrm.log.Tag;
+import com.lrm.log.Type;
+import com.lrm.log.User;
 import com.lrm.service.TagService;
+import com.lrm.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -53,9 +63,42 @@ public class TagServiceImpl implements TagService {
      * @return
      */
     @Override
-    public Page<Tag> listTag(Pageable pageable) {
-        Page<Tag> tagPage = tagReposIyoy.findAll(pageable);
-        return tagPage;
+    public Page<Tag> listTag(Pageable pageable, HttpServletRequest request , BlogQuery blog) {
+
+        return tagReposIyoy.findAll(new Specification<Tag>() {
+            @Override
+            public Predicate toPredicate(Root<Tag> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
+                //1.首先先构建一个装查询条件的集合容器类型为Predicate
+                List<Predicate> list = new ArrayList<>();
+
+                HttpSession session = request.getSession();
+                User user1 = null;
+                // BlogQuery blogQuery = null;
+                //2.获取User对象
+                User user = (User) request.getSession().getAttribute("user");
+                //3.通过if判断UserId是否为空
+                if (user == null) {
+                    //进来就说明用户是在首页进行点击分类，此时session拿不到值就给她new一个值并且给其ID赋个默认值
+                    user1 = new User();
+                    user1.setId(3L);
+                    Long user1Id = user1.getId();
+                    //  blogQuery = new BlogQuery();
+                    blog.setUserId(user1Id);
+                } else {
+                    Long userId = user.getId();
+                    //  blogQuery = new BlogQuery();
+                    blog.setUserId(userId);
+                }
+                if (blog.getUserId() != null) {
+                    list.add(cb.equal(root.<Tag>get("userId"), blog.getUserId()));
+                }
+                //5.最后在这里将集合转换为一个数组然后执行查询SQL语句
+                cq.where(list.toArray(new Predicate[list.size()]));
+                //6.若用户什么都没选择则返回null
+                return null;
+            }
+        },pageable);
+
     }
 
     /**
@@ -95,8 +138,17 @@ public class TagServiceImpl implements TagService {
      * @return
      */
     @Override
-    public Tag getTagByName(String name) {
-        return tagReposIyoy.findByName(name);
+    public Tag getTagByName(String name,Long userId) {
+        return tagReposIyoy.findByNameAndUserId(name,userId);
+    }
+
+    /**
+     * 查询所有标签
+     * @return
+     */
+    @Override
+    public List<Tag> listTag() {
+        return tagReposIyoy.findAll();
     }
 
     /**
@@ -105,8 +157,8 @@ public class TagServiceImpl implements TagService {
      * @return
      */
     @Override
-    public List<Tag> listTag() {
-        return tagReposIyoy.findAll();
+    public List<Tag> listTag(Long userId) {
+        return tagReposIyoy.findByUserId(userId);
     }
 
     /**
@@ -130,6 +182,20 @@ public class TagServiceImpl implements TagService {
         Sort sort = new Sort(Sort.Direction.DESC,"blogs.size");
         Pageable pageable = new PageRequest(0,size,sort);
         return tagReposIyoy.findTop(pageable);
+    }
+
+    /**
+     * 根据用户ID查询当前用户下面的所有标签信息
+     * @param request
+     * @param blog
+     * @return
+     */
+    @Override
+    public List<Tag> listTag(HttpServletRequest request, BlogQuery blog) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        Long userId = user.getId();
+        return tagReposIyoy.findByUserId(userId);
     }
 
     /**

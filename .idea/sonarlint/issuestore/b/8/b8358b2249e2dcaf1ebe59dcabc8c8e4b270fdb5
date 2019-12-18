@@ -1,13 +1,14 @@
 
-msquid:S1192l"VDefine a constant instead of duplicating this literal "redirect:/admin/blogs" 3 times.(Í¤
-msquid:S2159w"VRemove this call to "equals"; comparisons between unrelated types always return false.(‘†é
-Usquid:S3752u">Add a "method" parameter to this "@RequestMapping" annotation.(Ø£ý¦
-Usquid:S3752R">Add a "method" parameter to this "@RequestMapping" annotation.(±Ä†Í
-Wsquid:S4684b"@Replace this persistent entity with a simple POJO or DTO object.(õÜ‘Ä
-Zsquid:S37528">Add a "method" parameter to this "@RequestMapping" annotation.(þ”ÄÀüÿÿÿÿ
-Zsquid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(¯§â›ùÿÿÿÿ
-dsquid:S1192h"HDefine a constant instead of duplicating this literal "message" 4 times.(¥”ÌÄÿÿÿÿÿ
-fsquid:S4488a"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ïÀ´¼ùÿÿÿÿ
-\squid:S1192-"FDefine a constant instead of duplicating this literal "types" 3 times.(Àœ¢r
-Zsquid:S3752+">Add a "method" parameter to this "@RequestMapping" annotation.(¨Žó­øÿÿÿÿ
-[squid:UselessImportCheck"2Remove this unused import 'javax.persistence.Lob'.(úÍá®üÿÿÿÿ
+fsquid:S4488q"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ïÀ´¼ùÿÿÿÿ
+msquid:S1192|"VDefine a constant instead of duplicating this literal "redirect:/admin/blogs" 3 times.(Í¤
+lsquid:UselessImportCheck"ARemove this unused import 'org.springframework.http.HttpRequest'.(ÌÖÁÛ8«é‘¥ð-
+nsquid:S2159‡"VRemove this call to "equals"; comparisons between unrelated types always return false.(‘†é
+Zsquid:S3752C">Add a "method" parameter to this "@RequestMapping" annotation.(þ”ÄÀüÿÿÿÿ
+Wsquid:S4684r"@Replace this persistent entity with a simple POJO or DTO object.(õÜ‘Ä
+Usquid:S3752a">Add a "method" parameter to this "@RequestMapping" annotation.(±Ä†Í
+[squid:UselessImportCheck"2Remove this unused import 'javax.persistence.Lob'.(úÍá®üÿÿÿÿ
+Zsquid:S3752P">Add a "method" parameter to this "@RequestMapping" annotation.(¯§â›ùÿÿÿÿ
+bsquid:S11928"FDefine a constant instead of duplicating this literal "types" 3 times.(ù“úáþÿÿÿÿ
+Zsquid:S37521">Add a "method" parameter to this "@RequestMapping" annotation.(¨Žó­øÿÿÿÿ
+Vsquid:S3752…">Add a "method" parameter to this "@RequestMapping" annotation.(Ø£ý¦
+dsquid:S1192x"HDefine a constant instead of duplicating this literal "message" 4 times.(¥”ÌÄÿÿÿÿÿ

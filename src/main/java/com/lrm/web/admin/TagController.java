@@ -3,7 +3,9 @@ package com.lrm.web.admin;
 import com.lrm.dao.TagReposIyoy;
 import com.lrm.log.Tag;
 import com.lrm.log.Type;
+import com.lrm.log.User;
 import com.lrm.service.TagService;
+import com.lrm.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 /**
@@ -37,8 +40,8 @@ public class TagController {
      * @return
      */
     @RequestMapping(value = "/tag", method = RequestMethod.GET)
-    public String list(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model) {
-        model.addAttribute("page", tagService.listTag(pageable));
+    public String list(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model, HttpServletRequest request , BlogQuery blog) {
+        model.addAttribute("page", tagService.listTag(pageable,request,blog));
 
         return "admin/tag";
     }
@@ -76,17 +79,20 @@ public class TagController {
      * @return
      */
     @RequestMapping(value = "/tag", method = RequestMethod.POST)
-    public String post(@Valid Tag tag, BindingResult result, RedirectAttributes attributes) {
-        Tag tagName = tagService.getTagByName(tag.getName());
+    public String post(@Valid Tag tag, BindingResult result, RedirectAttributes attributes,HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        Long userId = user.getId();
+        Tag tagName = tagService.getTagByName(tag.getName(),userId);
         if (tagName != null) {
             //如果查到了说明已经存在该标签了不能再次添加
-            result.rejectValue("name", "nameError", "分类名称已经存在");
+            result.rejectValue("name", "nameError", "标签名称已经存在");
 
 
         }
         if (result.hasErrors()) {
             return "admin/Tag-input";
         }
+        tag.setUserId(userId);
         Tag tag1 = tagService.saveTag(tag);
         if (tag1 == null) {
             //如果等于null是保存失败
@@ -107,8 +113,11 @@ public class TagController {
      * @return
      */
     @RequestMapping(value = "/tag/{id}", method = RequestMethod.POST)
-    public String editpost(@Valid Tag tag, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
-        Tag tagName = tagService.getTagByName(tag.getName());
+    public String editpost(@Valid Tag tag, BindingResult result, @PathVariable Long id, RedirectAttributes attributes,HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        Long userId = user.getId();
+        Tag tagName = tagService.getTagByName(tag.getName(),userId);
+
         if (tagName != null) {
             //如果查到了说明已经存在该标签了不能再次添加
             result.rejectValue("name", "nameError", "标签名称已经存在");
@@ -118,6 +127,7 @@ public class TagController {
         if (result.hasErrors()) {
             return "admin/Tag-input";
         }
+        tag.setUserId(userId);
         Tag tag1 = tagService.updateType(id, tag);
         if (tag1 == null) {
             //如果等于null是保存失败
@@ -142,7 +152,7 @@ public class TagController {
             Long tagId = tag.getId();
             //通过分类ID删除标签
             tagService.deleteTagByIAndId(tagId);
-            attributes.addFlashAttribute("message", "删除分类成功");
+            attributes.addFlashAttribute("message", "删除标签成功");
             //删除完成后跳转到 列表页面
             return "redirect:/admin/tag";
         } else {

@@ -3,6 +3,7 @@ package com.lrm.service.impl;
 import com.lrm.NotFoundException;
 import com.lrm.dao.BlogRepository;
 import com.lrm.log.Type;
+import com.lrm.log.User;
 import com.lrm.pojo.Blog;
 import com.lrm.service.BlogService;
 import com.lrm.util.MarkdownUtils;
@@ -18,6 +19,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.*;
 
 /**
@@ -45,6 +48,7 @@ public class BlogServiceImpl implements BlogService {
         return blog;
     }
 
+
     /**
      * 分页动态查询
      *
@@ -53,7 +57,7 @@ public class BlogServiceImpl implements BlogService {
      * @return
      */
     @Override
-    public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
+    public Page<Blog> listBlog(Pageable pageable, BlogQuery blog, HttpServletRequest request) {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
@@ -71,16 +75,40 @@ public class BlogServiceImpl implements BlogService {
                 if (blog.isRecommend()) {
                     list.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
+
+                HttpSession session = request.getSession();
+                User user1 = null;
+                BlogQuery blogQuery = null;
+                User user = (User) session.getAttribute("user");
+                if (user == null) {
+                    //进来就说明用户是在首页进行点击分类，此时session拿不到值就给她new一个值并且给其ID赋个默认值
+                    user1 = new User();
+                    user1.setId(3L);
+                    Long user1Id = user1.getId();
+                    blogQuery = new BlogQuery();
+                    blogQuery.setUserId(user1Id);
+                } else {
+                    Long userId = user.getId();
+                    blogQuery = new BlogQuery();
+                    blogQuery.setUserId(userId);
+                }
+                if (blogQuery.getUserId() != null) {
+                    list.add(cb.equal(root.<User>get("user").get("id"), blog.getUserId()));
+                }
+
                 //5.最后在这里将集合转换为一个数组然后执行查询SQL语句
                 cq.where(list.toArray(new Predicate[list.size()]));
                 //6.若用户什么都没选择则返回null
+
                 return null;
             }
         }, pageable);
+
     }
 
     /**
      * 分页
+     *
      * @param pageable
      * @return
      */
@@ -145,29 +173,32 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      * 首页最新推荐
+     *
      * @param size
      * @return
      */
     @Override
     public List<Blog> listBlogTop(Integer size) {
-        Sort sort = new Sort(Sort.Direction.DESC,"updateTime");
-        Pageable pageable = new PageRequest(0,size,sort);
+        Sort sort = new Sort(Sort.Direction.DESC, "updateTime");
+        Pageable pageable = new PageRequest(0, size, sort);
         return blogRepository.findTop(pageable);
     }
 
     /**
      * 全局搜索
+     *
      * @param query
      * @param pageable
      * @return
      */
     @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query,pageable);
+        return blogRepository.findByQuery(query, pageable);
     }
 
     /**
      * 根据 标签id查询所有标签
+     *
      * @param tagId
      * @param pageable
      * @return
@@ -177,29 +208,31 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
-               Join<Object, Object> join = root.join("tags");
+                Join<Object, Object> join = root.join("tags");
 
-                return criteriaBuilder.equal(join.get("id"),tagId);
+                return criteriaBuilder.equal(join.get("id"), tagId);
             }
-        },pageable);
+        }, pageable);
     }
 
     /**
      * 归档查询
+     *
      * @return
      */
     @Override
     public Map<String, List<Blog>> archivesBlog() {
-           List<String> years =blogRepository.findGroudYear();
-           Map<String,List<Blog>> map = new HashMap<>();
+        List<String> years = blogRepository.findGroudYear();
+        Map<String, List<Blog>> map = new HashMap<>();
         for (String year : years) {
-                map.put(year,blogRepository.findByYear(year));
+            map.put(year, blogRepository.findByYear(year));
         }
         return map;
     }
 
     /**
      * 归档条数
+     *
      * @return
      */
     @Override
@@ -215,7 +248,7 @@ public class BlogServiceImpl implements BlogService {
             throw new NotFoundException("该博客不存在");
         }
         Blog b = new Blog();
-        BeanUtils.copyProperties(blog,b);
+        BeanUtils.copyProperties(blog, b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
         return b;

@@ -1,10 +1,12 @@
 package com.lrm.service;
 
 import com.lrm.log.Type;
+import com.lrm.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -20,7 +22,7 @@ public interface TypeService {
      * @param type
      * @return
      */
-    Type saveType(Type type);
+    Type saveType(Type type,Long userId);
 
     /**
      * 根据分类查询ID
@@ -34,7 +36,7 @@ public interface TypeService {
      * @param pageable
      * @return
      */
-    Page<Type> listType(Pageable pageable);
+    Page<Type> listType(Pageable pageable, HttpServletRequest request, BlogQuery blog);
 
     /**
      * 修改分类根据分类
@@ -55,13 +57,18 @@ public interface TypeService {
      * @param name
      * @return
      */
-    Type getTypeByName(String name);
+    Type getTypeByName(String name,Long userId);
 
     /**
      * 查询所有分类
      * @return
      */
     List<Type> listType();
+    /**
+     * 根据用户ID查询该用户下所有分类
+     * @return
+     */
+    List<Type> listType(Long userId);
 
     /**
      * 首页标签

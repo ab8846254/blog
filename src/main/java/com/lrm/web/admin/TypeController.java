@@ -1,7 +1,9 @@
 package com.lrm.web.admin;
 
 import com.lrm.log.Type;
+import com.lrm.log.User;
 import com.lrm.service.TypeService;
+import com.lrm.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Pageable;
@@ -14,6 +16,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 
@@ -28,14 +32,14 @@ public class TypeController {
     private TypeService typeService;
 
     /**
-     * 分页显示所有分类信息的接口
+     * 根据当前用户ID分页显示所有分类信息的接口
      * @param pageable
      * @param model
      * @return
      */
     @RequestMapping(value ="/types",method = RequestMethod.GET)
-    public String list(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC) Pageable pageable, Model model){
-        model.addAttribute("page",typeService.listType(pageable));
+    public String list(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC) Pageable pageable, Model model,HttpServletRequest request , BlogQuery blog){
+        model.addAttribute("page",typeService.listType(pageable,request,blog));
 
         return "admin/types";
     }
@@ -70,8 +74,10 @@ public class TypeController {
      * @return
      */
     @RequestMapping(value = "/types",method = RequestMethod.POST)
-    public String post(@Valid Type type, BindingResult result, RedirectAttributes attributes){
-        Type byName = typeService.getTypeByName(type.getName());
+    public String post(@Valid Type type, BindingResult result, RedirectAttributes attributes,HttpServletRequest request){
+        User user = (User) request.getSession().getAttribute("user");
+        Long userId = user.getId();
+        Type byName = typeService.getTypeByName(type.getName(),userId);
         if(byName!=null){
             //如果查到了说明已经存在该分类了不能再次添加
             result.rejectValue("name","nameError","分类名称已经存在");
@@ -81,7 +87,7 @@ public class TypeController {
         if (result.hasErrors()) {
             return "admin/types-input";
         }
-        Type type1 = typeService.saveType(type);
+        Type type1 = typeService.saveType(type,userId);
         if(type1==null){
             //如果等于null是保存失败
             attributes.addFlashAttribute("message","新增失败");
@@ -101,8 +107,11 @@ public class TypeController {
      * @return
      */
     @RequestMapping(value = "/types/{id}",method = RequestMethod.POST)
-    public String editpost(@Valid Type type, BindingResult result,@PathVariable Long id ,RedirectAttributes attributes){
-        Type byName = typeService.getTypeByName(type.getName());
+    public String editpost(@Valid Type type, BindingResult result,@PathVariable Long id ,RedirectAttributes attributes,HttpServletRequest request){
+        User user = (User) request.getSession().getAttribute("user");
+        Long userId = user.getId();
+        Type byName = typeService.getTypeByName(type.getName(),userId);
+        type.setUserId(userId);
         if(byName!=null){
             //如果查到了说明已经存在该分类了不能再次添加
             result.rejectValue("name","nameError","分类名称已经存在");

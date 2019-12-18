@@ -1,6 +1,7 @@
 package com.lrm.web;
 
 import com.lrm.log.Type;
+import com.lrm.log.User;
 import com.lrm.service.BlogService;
 import com.lrm.service.TypeService;
 import com.lrm.vo.BlogQuery;
@@ -13,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -35,7 +38,9 @@ public class TypeShowController {
      */
     @RequestMapping("/types/{id}")
     public String types(@PageableDefault(size = 8, sort = {"updateTime"},
-            direction = Sort.Direction.DESC) Pageable pageable, Model model,@PathVariable  Long id){
+            direction = Sort.Direction.DESC) Pageable pageable, Model model, @PathVariable  Long id, HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
         //查询处所有的分类
         List<Type> types = typeService.listTypeTop(10000);
 
@@ -45,7 +50,7 @@ public class TypeShowController {
         BlogQuery blogQuery = new BlogQuery();
         blogQuery.setTypeId(id);
         model.addAttribute("types",types);
-        model.addAttribute("page",blogService.listBlog(pageable,blogQuery));
+        model.addAttribute("page",blogService.listBlog(pageable,blogQuery,request));
         model.addAttribute("activeTypeId",id);
         return "types";
     }

@@ -5,6 +5,7 @@ import com.lrm.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -25,7 +26,7 @@ public interface BlogService {
      * @param blog
      * @return
      */
-   Page<Blog> listBlog(Pageable pageable , BlogQuery blog);
+   Page<Blog> listBlog(Pageable pageable , BlogQuery blog, HttpServletRequest request);
 
     /**
      * 分页
@@ -75,7 +76,7 @@ public interface BlogService {
      * @param pageable
      * @return
      */
-   Page<Blog> listBlog(Long tagId,Pageable pageable );
+   Page<Blog> listBlog(Long tagId,Pageable pageable);
 
     /**
      * 归档页面查询

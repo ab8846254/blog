@@ -2,10 +2,12 @@ package com.lrm.service;
 
 import com.lrm.log.Tag;
 import com.lrm.log.Type;
+import com.lrm.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -34,7 +36,7 @@ public interface TagService {
      * @param pageable
      * @return
      */
-    Page<Tag> listTag(Pageable pageable);
+    Page<Tag> listTag(Pageable pageable, HttpServletRequest request , BlogQuery blog);
 
 
     /**
@@ -59,13 +61,16 @@ public interface TagService {
      * @param name
      * @return
      */
-    Tag getTagByName(String name);
+    Tag getTagByName(String name,Long userId);
 
     /**
      * 查询所有标签
      */
     List<Tag> listTag();
-
+    /**
+     * 根据用户ID查询标签
+     */
+    List<Tag> listTag(Long userId);
     /**
      * 页面博客的标签ID
      * @param ids
@@ -79,4 +84,11 @@ public interface TagService {
      * @return
      */
     List<Tag> listTag(Integer size);
+
+    /**
+     *  首页标签
+     * @param size
+     * @return
+     */
+    List<Tag> listTag(HttpServletRequest request ,BlogQuery blog);
 }

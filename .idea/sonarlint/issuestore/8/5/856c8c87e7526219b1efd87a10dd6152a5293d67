@@ -1,0 +1,13 @@
+
+nsquid:CommentedOutCodeLine_"<This block of commented-out lines of code should be removed.(±Îôèþÿÿÿÿ8­Ëµåð-
+Osquid:S1481T",Remove this unused "session" local variable.(ûÝÙ¹þÿÿÿÿ8×þèÍð-
+Lsquid:S3655@"5Call "typeId.isPresent()" before accessing the value.(©³—™
+asquid:CallToDeprecatedMethod¶"3Remove this use of "PageRequest"; it is deprecated.(œ¿¸ºüÿÿÿÿ
+{squid:S1488–"^Immediately return this expression instead of assigning it to the temporary variable "byName".(¤Èüóÿÿÿÿÿ
+Ksquid:S3655{"4Call "type1.isPresent()" before accessing the value.(•ö˜´
+nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(±Îôèþÿÿÿÿ8¡éµåð-
+xsquid:S14883"\Immediately return this expression instead of assigning it to the temporary variable "save".(Þ²¨›øÿÿÿÿ
+Ksquid:S1604N"(Make this anonymous inner class a lambda(µ•™Óüÿÿÿÿ8¦åÌð-
+ssquid:S1488@"\Immediately return this expression instead of assigning it to the temporary variable "type".(©³—™
+^squid:S1854T";Remove this useless assignment to local variable "session".(ûÝÙ¹þÿÿÿÿ8×þèÍð-
+isquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(„ÕÉÌ8š¦µåð-

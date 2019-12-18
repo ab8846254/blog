@@ -1,9 +1,9 @@
 
-HWeb:BoldAndItalicTagsCheck2"Replace this <i> tag by <em>.(ÖÈì„øÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(‹’«ğùÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(¯’ËÈ
-CWeb:BoldAndItalicTagsCheck#"Replace this <i> tag by <em>.(ş¦ô„
-HWeb:BoldAndItalicTagsCheck+"Replace this <i> tag by <em>.(ĞÅË¶ûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck!"Replace this <i> tag by <em>.(‡«­üÿÿÿÿ
-NWeb:AvoidCommentedOutCodeCheck"Remove this commented out code.(ı±Æáıÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck%"Replace this <i> tag by <em>.(’Èí
+HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(‹’«ğùÿÿÿÿ
+HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(‡«­üÿÿÿÿ
+HWeb:BoldAndItalicTagsCheck("Replace this <i> tag by <em>.(ĞÅË¶ûÿÿÿÿ
+CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(¯’ËÈ
+CWeb:BoldAndItalicTagsCheck "Replace this <i> tag by <em>.(ş¦ô„
+CWeb:BoldAndItalicTagsCheck""Replace this <i> tag by <em>.(’Èí
+HWeb:BoldAndItalicTagsCheck/"Replace this <i> tag by <em>.(ÖÈì„øÿÿÿÿ
+PWeb:AvoidCommentedOutCodeCheck]"Remove this commented out code.(ğ‹³¸8ƒˆË•ğ-

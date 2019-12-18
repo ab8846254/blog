@@ -1,4 +1,4 @@
 
-Usquid:UselessImportCheck"1Remove this unused import 'com.lrm.vo.BlogQuery'.(Ìı‹„
-Zsquid:S37522">Add a "method" parameter to this "@RequestMapping" annotation.(ˆÄ’ûÿÿÿÿ
 fsquid:S4488<"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(üíÁÔùÿÿÿÿ
+Zsquid:S37522">Add a "method" parameter to this "@RequestMapping" annotation.(ˆÄ’ûÿÿÿÿ
+Usquid:UselessImportCheck"1Remove this unused import 'com.lrm.vo.BlogQuery'.(Ìı‹„

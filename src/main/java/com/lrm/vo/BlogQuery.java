@@ -14,5 +14,7 @@ public class BlogQuery {
 
     private boolean recommend;
 
+    private Long userId;
+
 
 }

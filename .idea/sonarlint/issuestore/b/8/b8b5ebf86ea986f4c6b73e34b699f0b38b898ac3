@@ -1,9 +1,8 @@
 
-isquid:UselessImportCheck">Remove this unused import 'javax.validation.constraints.Size'.(›«´İ8¹Ä¬Ìî-
+_squid:CallToDeprecatedMethod*"0Remove this use of "NotBlank"; it is deprecated.(²öö¼8¥äÎ¤ğ-
+isquid:UselessImportCheck	"ERemove this unused import 'javax.print.attribute.standard.MediaSize'.(«ı¥˜
+dsquid:CallToDeprecatedMethod"0Remove this use of "NotBlank"; it is deprecated.(®ˆËğıÿÿÿÿ8í¼ÏÌî-
+_squid:CallToDeprecatedMethod#"0Remove this use of "NotBlank"; it is deprecated.(³¾àË8í¼ÏÌî-
 qsquid:UselessImportCheck
 "ARemove this unused import 'javax.validation.constraints.NotNull'.(áç¥ãüÿÿÿÿ8¹Ä¬Ìî-
 wsquid:UselessImportCheck"GRemove this unused import 'org.hibernate.validator.constraints.Length'.(Ê—œªÿÿÿÿÿ8¹Ä¬Ìî-
-_squid:CallToDeprecatedMethod"0Remove this use of "NotBlank"; it is deprecated.(³¾àË8í¼ÏÌî-
-dsquid:CallToDeprecatedMethod"0Remove this use of "NotBlank"; it is deprecated.(®ˆËğıÿÿÿÿ8í¼ÏÌî-
-isquid:UselessImportCheck	"ERemove this unused import 'javax.print.attribute.standard.MediaSize'.(«ı¥˜
-_squid:CallToDeprecatedMethod#"0Remove this use of "NotBlank"; it is deprecated.(®Œ÷8í¼ÏÌî-

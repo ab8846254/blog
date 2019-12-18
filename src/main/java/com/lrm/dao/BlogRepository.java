@@ -1,8 +1,10 @@
 package com.lrm.dao;
 
 import com.lrm.pojo.Blog;
+import com.lrm.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
@@ -33,4 +35,7 @@ public interface BlogRepository extends JpaRepository<Blog,Long>, JpaSpecificati
     List<String> findGroudYear();
     @Query("select b from Blog b where function('date_format',b.updateTime,'%Y') = ?1")
     List<Blog> findByYear(String year);
+
+
+
 }

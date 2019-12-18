@@ -5,11 +5,13 @@ import com.lrm.pojo.Blog;
 import com.lrm.service.BlogService;
 import com.lrm.service.TagService;
 import com.lrm.service.TypeService;
+import com.lrm.service.UserService;
 import com.lrm.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.persistence.Lob;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -35,15 +38,23 @@ public class BlogController {
     @Autowired
     private TagService tagService;
 
+    @Autowired
+    private UserService userService;
+
     /**
      * 返回到列表页面
      *
      * @return
      */
     @RequestMapping("/blogs")
-    public String list(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
-        model.addAttribute("types", typeService.listType());
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+    public String list(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        Long id = user.getId();
+        blog.setUserId(id);
+        //查询对应用户的对于分类列表
+        model.addAttribute("types", typeService.listType(id));
+        model.addAttribute("page", blogService.listBlog(pageable, blog,request));
 
         return "admin/blogs";
     }
@@ -54,8 +65,9 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/blogs/search")
-    public String search(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+    public String search(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model,HttpServletRequest request) {
+
+        model.addAttribute("page", blogService.listBlog(pageable, blog,request));
         return "admin/blogs :: blogList";
     }
 
@@ -66,9 +78,12 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/blogs/input")
-    public String input(Model model) {
-        model.addAttribute("types", typeService.listType());
-        model.addAttribute("tags", tagService.listTag());
+    public String input(Model model,HttpServletRequest request, BlogQuery blog) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        Long id = user.getId();
+        model.addAttribute("types", typeService.listType(id));
+        model.addAttribute("tags", tagService.listTag(request,blog));
         model.addAttribute("blog", new Blog());
         return "admin/blogs-input";
     }
@@ -80,9 +95,10 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/blogs/{id}/input")
-    public String editInput(@PathVariable Long id, Model model) {
-        model.addAttribute("types", typeService.listType());
-        model.addAttribute("tags", tagService.listTag());
+    public String editInput(@PathVariable Long id, Model model, HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        model.addAttribute("types", typeService.listType(user.getId()));
+        model.addAttribute("tags", tagService.listTag(user.getId()));
         Blog blog = blogService.getBlog(id);
         blog.init();
         model.addAttribute("blog", blog);

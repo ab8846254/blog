@@ -18,6 +18,7 @@ public class Tag {
     @GeneratedValue
     private Long id;
     private String name;
+    private Long userId;
     @ManyToMany(mappedBy = "tags")
     private List<Blog> blogs =new ArrayList<>();
 }

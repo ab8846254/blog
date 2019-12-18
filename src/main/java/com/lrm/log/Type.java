@@ -20,6 +20,7 @@ public class Type {
     private Long id;
     @NotBlank(message = "分类名称不能为空")
     private String name;
+    private Long userId;
     @OneToMany(mappedBy = "type")
     private List<Blog>blogs = new ArrayList<>();
 }
