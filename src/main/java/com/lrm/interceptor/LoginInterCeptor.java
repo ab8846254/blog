@@ -5,6 +5,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author Administrator
+ */
 public class LoginInterCeptor extends HandlerInterceptorAdapter {
     /**
      * 拦截器，拦截未登陆的

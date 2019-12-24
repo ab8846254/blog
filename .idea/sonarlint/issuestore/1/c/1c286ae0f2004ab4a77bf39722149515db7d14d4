@@ -1,0 +1,6 @@
+
+Dsquid:S16044"(Make this anonymous inner class a lambda(¤‰µÌùÿÿÿÿ
+Usquid:S1854P"9Remove this useless assignment to local variable "table".(ø¹ÿÿÿÿÿ
+O
+squid:S106V"9Replace this use of System.out or System.err by a logger.(ÌúÚÖ
+Fsquid:S1481P"*Remove this unused "table" local variable.(ø¹ÿÿÿÿÿ

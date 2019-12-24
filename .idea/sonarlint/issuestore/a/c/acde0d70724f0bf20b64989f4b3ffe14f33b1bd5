@@ -1,14 +1,11 @@
 
-psquid:S1192g"TDefine a constant instead of duplicating this literal "redirect:/admin/tag" 4 times.(çÓè†ýÿÿÿÿ
-dsquid:S4488*"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¢ÉšÛùÿÿÿÿ
-asquid:S4488Q"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(°ûüœ
-Usquid:S37526">Add a "method" parameter to this "@RequestMapping" annotation.(ê„àÒ
-Ysquid:UselessImportCheck"5Remove this unused import 'com.lrm.dao.TagReposIyoy'.(÷—¨ð
-^squid:S1192c"HDefine a constant instead of duplicating this literal "message" 6 times.(èð‹w
-esquid:S4488“"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(€©îÎÿÿÿÿÿ
-\squid:S4684t"@Replace this persistent entity with a simple POJO or DTO object.(ÿ¢½¯ûÿÿÿÿ
-Psquid:UselessImportCheck"-Remove this unused import 'com.lrm.log.Type'.(ÿ¶£
-gsquid:S11929"PDefine a constant instead of duplicating this literal "admin/Tag-input" 4 times.(ìŒ¾Õ
-dsquid:S4488C"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Òò“´ýÿÿÿÿ
-`squid:S4488s"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(×ë¦A
-Wsquid:S4684R"@Replace this persistent entity with a simple POJO or DTO object.(ù¡òé
+Wsquid:S4684P"@Replace this persistent entity with a simple POJO or DTO object.(ù¡òé
+psquid:S1192e"TDefine a constant instead of duplicating this literal "redirect:/admin/tag" 4 times.(çÓè†ýÿÿÿÿ
+esquid:S4488‘"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(€©îÎÿÿÿÿÿ
+dsquid:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¢ÉšÛùÿÿÿÿ
+^squid:S1192a"HDefine a constant instead of duplicating this literal "message" 6 times.(èð‹w
+`squid:S4488q"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(×ë¦A
+Usquid:S37524">Add a "method" parameter to this "@RequestMapping" annotation.(ê„àÒ
+dsquid:S4488A"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Òò“´ýÿÿÿÿ
+\squid:S4684r"@Replace this persistent entity with a simple POJO or DTO object.(ÿ¢½¯ûÿÿÿÿ
+asquid:S4488O"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(°ûüœ

@@ -1,52 +1,0 @@
-
-CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(ÁÆäĞ
-HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(„âöÕûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(ê©ˆ•ùÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(èìğ¤øÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(ß—ï£
-HWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(†±Ó¦ÿÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck%"Replace this <i> tag by <em>.(ÖÈì„øÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck4"Replace this <i> tag by <em>.(äÛ†İ
-CWeb:BoldAndItalicTagsCheck7"Replace this <i> tag by <em>.(ÔÕèÛ
-HWeb:BoldAndItalicTagsCheckL"Replace this <i> tag by <em>.(È¿Û¡üÿÿÿÿ
-HWeb:BoldAndItalicTagsCheckR"Replace this <i> tag by <em>.(ûÂÛÔşÿÿÿÿ
-CWeb:BoldAndItalicTagsCheckW"Replace this <i> tag by <em>.(¯ ™£
-CWeb:BoldAndItalicTagsCheckZ"Replace this <i> tag by <em>.(ı¦ë‰
-@	Web:S1827["+Remove this deprecated "summary" attribute.(²’ËÑ
-l Web:TableHeaderHasIdOrScopeCheck^";Add either an 'id' or a 'scope' attribute to this <th> tag.(ïÄÛõùÿÿÿÿ
-l Web:TableHeaderHasIdOrScopeCheck_";Add either an 'id' or a 'scope' attribute to this <th> tag.(¿ÌÍÊÿÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheck`";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ğü¯Î
-l Web:TableHeaderHasIdOrScopeChecka";Add either an 'id' or a 'scope' attribute to this <th> tag.(š”ì½ÿÿÿÿÿ
-g Web:TableHeaderHasIdOrScopeCheckb";Add either an 'id' or a 'scope' attribute to this <th> tag.(£øÑí
-l Web:TableHeaderHasIdOrScopeCheckc";Add either an 'id' or a 'scope' attribute to this <th> tag.(…†°‘ÿÿÿÿÿ
-f Web:TableHeaderHasIdOrScopeCheckd";Add either an 'id' or a 'scope' attribute to this <th> tag.(Õ‹¡S
-g Web:TableHeaderHasIdOrScopeChecke";Add either an 'id' or a 'scope' attribute to this <th> tag.(½÷èë
-g Web:TableHeaderHasIdOrScopeCheckf";Add either an 'id' or a 'scope' attribute to this <th> tag.(°Ÿ½·
-DWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(àÈ¹‘
-DWeb:BoldAndItalicTagsCheck£"Replace this <i> tag by <em>.(–­œ™
-MWeb:BoldAndItalicTagsCheck¥"!Replace this <b> tag by <strong>.(Ûõá…şÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck¥"Replace this <i> tag by <em>.(Ûõá…şÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck¨"Replace this <i> tag by <em>.(È¬ˆíøÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck©"Replace this <i> tag by <em>.(»İŞşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckª"Replace this <i> tag by <em>.(ªÕ•¯ûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheckº"!Replace this <b> tag by <strong>.(–ïÍí
-DWeb:BoldAndItalicTagsCheck¹"Replace this <i> tag by <em>.(à¥èó
-@	Web:S1827º"+Remove this deprecated "summary" attribute.(Îš‹`
-m Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(Èú­ùÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck¾";Add either an 'id' or a 'scope' attribute to this <th> tag.(ƒåÕ¯
-h Web:TableHeaderHasIdOrScopeCheck¿";Add either an 'id' or a 'scope' attribute to this <th> tag.(°¸óÿ
-m Web:TableHeaderHasIdOrScopeCheckÀ";Add either an 'id' or a 'scope' attribute to this <th> tag.(Éˆ•ñıÿÿÿÿ
-m Web:TableHeaderHasIdOrScopeCheckÅ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ñ©Û›øÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck‘";Add either an 'id' or a 'scope' attribute to this <th> tag.(¾ÇÇî
-h Web:TableHeaderHasIdOrScopeCheck­";Add either an 'id' or a 'scope' attribute to this <th> tag.(˜é½ë
-m Web:TableHeaderHasIdOrScopeCheck½";Add either an 'id' or a 'scope' attribute to this <th> tag.(€à°Èşÿÿÿÿ
-s%Web:ItemTagNotWithinContainerTagCheckô"<Surround this <li> item tag by a <ul> or <ol> container one.(áşÖ–ıÿÿÿÿ
-s%Web:ItemTagNotWithinContainerTagCheckö"<Surround this <li> item tag by a <ul> or <ol> container one.(ñäŒ‡ÿÿÿÿÿ
-s%Web:ItemTagNotWithinContainerTagCheckù"<Surround this <li> item tag by a <ul> or <ol> container one.(İÉ¨®ÿÿÿÿÿ
-n%Web:ItemTagNotWithinContainerTagCheckú"<Surround this <li> item tag by a <ul> or <ol> container one.(ªÄ¢÷
-IWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(Ó¤ìıÿÿÿÿ
-DWeb:BoldAndItalicTagsCheck‘"Replace this <i> tag by <em>.(ˆ®¾ü
-IWeb:AvoidCommentedOutCodeCheckœ"Remove this commented out code.(Ñ¯»v
-OWeb:AvoidCommentedOutCodeCheckÈ"Remove this commented out code.(Ÿ–”Áùÿÿÿÿ
-OWeb:AvoidCommentedOutCodeCheckÎ"Remove this commented out code.(´µì´üÿÿÿÿ
-JWeb:AvoidCommentedOutCodeCheckÔ"Remove this commented out code.(Îé‚ô

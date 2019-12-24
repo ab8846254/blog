@@ -1,0 +1,5 @@
+
+vsquid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+Bsquid:S2885"&Make "formatter" an instance variable.(’ÀÊ¾øÿÿÿÿ
+O
+squid:S106%"9Replace this use of System.out or System.err by a logger.(çáè

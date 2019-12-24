@@ -1,9 +1,9 @@
 
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8æûÕ¢ñ-
-;squid:S2119M"Save and re-use this "Random".(¼İÅf8û³Õ¢ñ-
-Usquid:S2589B"7Remove this expression which always evaluates to "true"(…Ğ¶‚8Äûıùí-
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8æûÕ¢ñ-
+xsquid:S1488""\Immediately return this expression instead of assigning it to the temporary variable "user".(»ÒÂùÿÿÿÿ
 osquid:S00117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û‡•w8û³Õ¢ñ-
 lsquid:UselessImportCheck"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş
-xsquid:S1488""\Immediately return this expression instead of assigning it to the temporary variable "user".(»ÒÂùÿÿÿÿ
-[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8æûÕ¢ñ-
 bsquid:UselessImportCheck"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8ƒØ£ñ-
+;squid:S2119M"Save and re-use this "Random".(¼İÅf8û³Õ¢ñ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8æûÕ¢ñ-
+Usquid:S2589B"7Remove this expression which always evaluates to "true"(…Ğ¶‚8Äûıùí-

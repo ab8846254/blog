@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
     data-username: root
-    data-password: root
+    data-password: wangmin520
   jpa:
     hibernate:
       ddl-auto: none
@@ -14,4 +14,4 @@ logging:
     com.imcoding: info
   file: log/blog-pro.log
 server:
-  port: 8081
+  port: 8080

@@ -6,8 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="message_consume" />
-        <module name="message_producer" />
         <module name="blog" />
       </profile>
     </annotationProcessing>

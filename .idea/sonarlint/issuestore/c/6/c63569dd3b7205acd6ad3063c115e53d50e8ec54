@@ -1,13 +1,13 @@
 
-^squid:S1854J";Remove this useless assignment to local variable "session".(ûİÙ¹şÿÿÿÿ8ğ¸÷ìğ-
-\squid:CallToDeprecatedMethod·"3Remove this use of "PageRequest"; it is deprecated.(ÙÕİ·
-Ksquid:S1604D"(Make this anonymous inner class a lambda(ì½š¡úÿÿÿÿ8”Ğ÷ìğ-
-Usquid:S36558"7Call "Optional#isPresent()" before accessing the value.(Á†ˆã8²¸ÿñ-
-lsquid:S00100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Ì—øÿÿÿÿ
-Osquid:S1481J",Remove this unused "session" local variable.(ûİÙ¹şÿÿÿÿ8ğ¸÷ìğ-
 nsquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(±Îôèşÿÿÿÿ8ğ¸÷ìğ-
+\squid:CallToDeprecatedMethod·"3Remove this use of "PageRequest"; it is deprecated.(ÙÕİ·
 isquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(„ÕÉÌ8ğ¸÷ìğ-
 nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(±Îôèşÿÿÿÿ8ğ¸÷ìğ-
+Usquid:S36558"7Call "Optional#isPresent()" before accessing the value.(Á†ˆã8²¸ÿñ-
+^squid:S1854J";Remove this useless assignment to local variable "session".(ûİÙ¹şÿÿÿÿ8ğ¸÷ìğ-
+Ksquid:S1604D"(Make this anonymous inner class a lambda(ì½š¡úÿÿÿÿ8”Ğ÷ìğ-
 Usquid:CallToDeprecatedMethodÕ",Remove this use of "Long"; it is deprecated.(ÏÌ‘Ù
 Ksquid:S3655r"4Call "tagid.isPresent()" before accessing the value.(ó•äÄ
+lsquid:S00100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Ì—øÿÿÿÿ
+Osquid:S1481J",Remove this unused "session" local variable.(ûİÙ¹şÿÿÿÿ8ğ¸÷ìğ-
 Wsquid:UselessImportCheck"-Remove this unused import 'com.lrm.log.Type'.(ÿ¶£8‰Ä…íğ-

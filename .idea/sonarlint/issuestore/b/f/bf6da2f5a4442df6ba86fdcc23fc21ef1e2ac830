@@ -1,13 +1,13 @@
 
-^squid:S1192]"HDefine a constant instead of duplicating this literal "message" 6 times.(èğ‹w
-fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8÷¯òÌğ-
-Usquid:S37523">Add a "method" parameter to this "@RequestMapping" annotation.(ÊÏåˆ
-`squid:S4488‹"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Øòº«
 rsquid:S1192a"VDefine a constant instead of duplicating this literal "redirect:/admin/types" 4 times.(æšÙøÿÿÿÿ
+isquid:S11926"RDefine a constant instead of duplicating this literal "admin/types-input" 4 times.(´„ÀÖ
+asquid:S4488m"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œØ¸
+`squid:S4488‹"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Øòº«
 asquid:S4488L"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Îü³Ã
-dsquid:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÌŠ«Ïşÿÿÿÿ
+Usquid:S37523">Add a "method" parameter to this "@RequestMapping" annotation.(ÊÏåˆ
 Vsquid:S4684M"@Replace this persistent entity with a simple POJO or DTO object.(º‡9
+dsquid:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÌŠ«Ïşÿÿÿÿ
 dsquid:S4488?"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ì½¯ ıÿÿÿÿ
 \squid:S4684n"@Replace this persistent entity with a simple POJO or DTO object.(µÂË²ùÿÿÿÿ
-asquid:S4488m"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œØ¸
-isquid:S11926"RDefine a constant instead of duplicating this literal "admin/types-input" 4 times.(´„ÀÖ
+fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8÷¯òÌğ-
+^squid:S1192]"HDefine a constant instead of duplicating this literal "message" 6 times.(èğ‹w

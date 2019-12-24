@@ -12,6 +12,7 @@
     <artifactId>blog</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>blog</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -107,5 +108,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

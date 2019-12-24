@@ -1,8 +1,6 @@
 package com.lrm.web.admin;
 
-import com.lrm.dao.TagReposIyoy;
 import com.lrm.log.Tag;
-import com.lrm.log.Type;
 import com.lrm.log.User;
 import com.lrm.service.TagService;
 import com.lrm.vo.BlogQuery;
@@ -54,7 +52,7 @@ public class TagController {
     @RequestMapping(value = "/tag/input")
     public String input(Model model) {
         model.addAttribute("tag", new Tag());
-        return "admin/Tag-input";
+        return "admin/tag-input";
     }
 
     /**
@@ -67,7 +65,7 @@ public class TagController {
     @RequestMapping(value = "/tag/{id}/input", method = RequestMethod.GET)
     public String editInput(@PathVariable Long id, Model model) {
         model.addAttribute("tag", tagService.findByTagAndId(id));
-        return "admin/Tag-input";
+        return "admin/tag-input";
     }
 
     /**
@@ -90,7 +88,7 @@ public class TagController {
 
         }
         if (result.hasErrors()) {
-            return "admin/Tag-input";
+            return "tag-input";
         }
         tag.setUserId(userId);
         Tag tag1 = tagService.saveTag(tag);
@@ -125,7 +123,7 @@ public class TagController {
 
         }
         if (result.hasErrors()) {
-            return "admin/Tag-input";
+            return "tag-input";
         }
         tag.setUserId(userId);
         Tag tag1 = tagService.updateType(id, tag);
